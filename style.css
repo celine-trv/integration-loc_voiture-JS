@@ -1,0 +1,287 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h2, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, input, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, .container-fluid
+{
+	margin: 0;
+	padding: 0;
+	border: 0; 
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ********************** HEADER ********************** */
+
+header{
+	height: 68vh;
+	position: relative;
+	margin-bottom: 1.2em;
+}
+
+/* ***** IMG BACKGROUND ***** */
+
+#header_background{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+}
+
+#header_background img{
+	height: 100%;
+	min-width: 100%;
+	position: absolute;
+	/* object-fit: cover; */
+}
+
+#header_background img:not(:first-of-type){
+	opacity: 0;
+}
+
+/* ***** NAV ***** */
+
+.burger{
+	height: 28px;
+	width: 36px;
+	background-color: transparent;
+	border: rgb(212, 212, 212) solid 1px;
+	border-radius: 10%;
+	margin: 0.4em 0.8em 0.2em 0;
+	padding: 0.4em;
+}
+
+.burger:hover{
+	background-color: rgb(212, 212, 212);
+}
+
+.burger span{
+	height: 1px;
+	width: 80%;
+	background-color: rgb(172, 172, 172);
+}
+
+header nav{
+	color: grey;
+	padding: 0.4em;
+	top: 45px;
+	display: none;
+}
+
+header nav a{
+	padding: 0.4em;
+	color: inherit;
+	font-size: 0.75em;
+}
+
+header nav a:hover{
+	background-color: rgba(0, 128, 0, 0.6);
+	color: white;
+}
+
+/* ***** SECTION TITLE ***** */
+
+.header_title_form{	
+	height: calc(100% - 38px);
+}
+
+.header_title_form h1{
+	font-size: 2.3em;
+}
+
+.header_title_form p{
+	font-size: 0.9em;
+}
+
+/* ***** FORM RENTAL SEARCH ***** */
+
+.search_form{
+	width: 60%;
+	background-color: rgba(255, 255, 255, 0.6);
+	font-size: 0.85em;
+	margin-bottom: 4.4em;
+}
+
+.search_form div:not(:last-child){
+	padding: 0.5em;
+}
+
+.rental_date{
+	background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 95% 50% no-repeat;
+	cursor: pointer;
+}
+
+.rental_date:focus{
+	color: rgb(130, 130, 130);
+}
+
+.search_form button{
+	background-color: rgba(0, 128, 0, 0.6);
+	padding: 0.8em;
+}
+
+.search_form button:hover{
+	background-color: rgba(0, 128, 0, 0.8);
+}
+
+
+/* ********************** MAIN ********************** */
+
+main{
+	width: 60%;
+}
+
+/* ***** RESULTS & SORTING ***** */
+
+.results_number{
+	font-size: 1.5em;
+}
+
+.sort_results{
+	padding: 0.5em;
+	border-radius: 5%;
+	font-size: 0.8em;
+}
+
+/* ***** CARS ***** */
+
+.rent_car{
+	border-bottom: 1px solid rgba(211, 211, 211, 0.5);
+}
+
+.car_carousel{
+	min-width: 35%;
+}
+
+.arrow{
+	width: 24px;
+	height: 30px;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.car_img img{	
+	width: 95%;
+	max-width: 350px;
+	height: auto;
+}
+
+.car_img img:not(:first-of-type){
+	opacity: 0;
+}
+
+.car_description
+{
+	font-size: 0.8em;
+}
+
+.car_description h2{
+	font-size: 1.6em;
+}
+
+.car_description button{
+	background-color: rgba(0, 128, 0, 0.6);
+	border-radius: 5%;
+}
+
+.car_description button:hover{
+	background-color: rgba(0, 128, 0, 0.8);
+}
+
+.scroll_load{
+	display: none;
+}
+
+
+/* ********************** FOOTER ********************** */
+
+footer{
+	width: 60%;
+}
+
+footer img{
+	height: 95px;
+}
+
+footer p{
+	font-size: 0.8em;
+	line-height: 1.5;
+}
+
+footer a{
+	color: inherit;
+}
+
+
+/* ********************** RESPONSIVE ********************** */
+
+@media screen and (max-width: 1200px)
+{
+	.search_form, main, footer{
+		width: 70%;
+	}
+}
+
+
+@media screen and (max-width: 992px)
+{
+	.search_form{
+		margin-bottom: 1.2em;
+	}
+
+	.car_carousel{
+		min-width: 55%;
+	}
+
+	.car_img img{
+		top: 50% !important;
+		transform: translate(-50%, -50%) !important;
+	}
+}
+
+
+@media screen and (max-width: 768px)
+{
+	.search_form, main, footer{
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 576px)
+{
+	.search_form, main, footer{
+		width: 95%;
+	}
+
+	.search_form{
+		margin: auto;
+	}
+
+	.car_img{
+		width: calc(100% - 24px);
+	}
+
+	.arrow:first-of-type{
+		transform: translate(50%, -50%) !important;
+	}
+
+	.arrow:last-of-type{
+		transform: translate(-50%, -50%) !important;
+	}
+
+	.car_description, footer p{
+		font-size: 0.65em;
+	}
+}
